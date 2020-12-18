@@ -15,11 +15,12 @@ typedef struct student {
 	double english;
 	double programming;
 	double PE;
+	double ave;
 	struct student* next;
 }student;
 #include"LSY.h"
 //#include<HCM.h>
-//#include<TSY.h>
+#include"TSY.h"
 const int size = sizeof(student);
 void abandon();
 void printTitle();

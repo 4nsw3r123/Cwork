@@ -56,6 +56,7 @@ int get(student** head)
 		if (current == NULL)
 			return 0;
 		scanf("%d %s %d %s %s %s %s %s %lf %lf %lf %lf %lf", &current->number, current->name, &current->age, current->sex, current->birth, current->address, current->tel, current->email, &current->math, &current->algebra, &current->english, &current->programming, &current->PE);
+		current->ave = (current->english + current->algebra + current->math + current->PE + current->programming) / 5;
 		current->next = NULL;
 		abandon();
 		if (*head == NULL)

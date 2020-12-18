@@ -1,11 +1,11 @@
 ﻿#include"MAIN.h"
 void printTitle(void)
 {
-	printf("%6s %6s %3s %4s %8s %25s %23s %20s %15s  %s %6s  %6s %s \n", "学号", "姓名", "年龄", "性别", "出生年月", "地址", "电话", "E-mail", "高等数学", "线性代数", "英语", "程序设计", "体育");
+	printf("%6s %6s %3s %4s %8s %25s %23s %20s %15s  %s %6s  %6s %s %s\n", "学号", "姓名", "年龄", "性别", "出生年月", "地址", "电话", "E-mail", "高等数学", "线性代数", "英语", "程序设计", "体育","平均分");
 }
 void printContent(const student* stu)
 {
-	printf("%08d %3s %3d %4s %s %30s %20s %22s %9.2f %8.2f %8.2f %6.2f %6.2f\n", stu->number, stu->name, stu->age, stu->sex, stu->birth, stu->address, stu->tel, stu->email, stu->math, stu->algebra, stu->english, stu->programming, stu->PE);
+	printf("%08d %3s %3d %4s %s %30s %20s %22s %9.2f %8.2f %8.2f %6.2f %6.2f %6.2f\n", stu->number, stu->name, stu->age, stu->sex, stu->birth, stu->address, stu->tel, stu->email, stu->math, stu->algebra, stu->english, stu->programming, stu->PE,stu->ave);
 }
 void abandon()
 {
@@ -61,7 +61,7 @@ int main()
 		}
 		else if (n == 3)
 		{
-			/*sort(const head);*/
+			sort(head);/*sort(const head);*/
 		}
 		else if (n == 4)
 		{
@@ -73,7 +73,7 @@ int main()
 		}
 		else if (n == 6)
 		{
-			/*delete(head);*/
+			Delete(&head);/*delete(head);*/
 		}
 		else if (n == -1)
 		{
